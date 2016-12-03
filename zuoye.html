@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+/*
+  function Person(calculus,linearAlgebra,language){
+	this.calculus=calculus;
+	this.linearAlgebra=linearAlgebra;
+	this.language=language;
+	this.ejectsum=ejectsum;
+	}
+
+	function ejectsum(){
+		alert(this.calculus+this.linearAlgebra+this.language);
+	}
+    
+  var person1=new Person(65,76,89);
+  person1.ejectsum();
+  //  alert(person1["calculus"]);  // 输出85
+  var person2=new Person(85,86,69);
+  person2.ejectsum();
+  var person3=new Person(75,66,79);
+  person3.ejectsum();
+
+  var arrper=[person1,person2,person3];
+//求微积分的成绩(包括平均分/单科总分)
+  var calarr = arrper.map(function (user) { return user.calculus; });
+  alert(calarr);
+  var calsum=0;
+  for(var i=0;i<calarr.length;i++){
+	calsum+=calarr[i];
+  }
+  alert(calsum); //单科总分
+  alert(Math.floor(calsum/calarr.length));   //平均分
+//求线性代数的成绩(包括平均分/单科总分)
+  var linearr = arrper.map(function (user) { return user.linearAlgebra; });
+  alert(linearr);    
+  var linesum=0;   
+  for(var i=0;i<linearr.length;i++){
+	linesum+=linearr[i];
+  }
+  alert(linesum);  
+  alert(Math.floor(linesum/linearr.length));
+//求C语言的成绩(包括平均分/单科总分)
+	var langarr = arrper.map(function (user) { return user.language; });
+	alert(langarr); 
+	var langsum=0;
+	for(var i=0;i<langarr.length;i++){
+		langsum+=langarr[i];
+	}
+	alert(langsum);  
+	alert(Math.floor(langsum/langarr.length)); 
+	
+	function sortNumber(a,b){
+	return a-b
+	}
+	alert(calarr.sort(sortNumber));   //从小到大排序
+	newcalarr=calarr.sort(sortNumber);  
+	newcalarr.reverse();
+	alert(newcalarr);     //从大到小排序
+	*/
+
+ 
+//------------------数组方案---------------------------
+  var users = [
+  {name: "刘鹏", "calculus": 66,"linearAlgebra":87,"language":89, },
+  {name: "周涛", "calculus": 86,"linearAlgebra":77,"language":79, },
+  {name: "魏萌", "calculus": 76,"linearAlgebra":67,"language":69, }
+];
+//对C语言进行成绩统计(平均分/单科总分)
+var langarr = users.map(function (user) { return user.language; });
+alert(langarr); 
+var langsum=0;
+for(var i=0;i<langarr.length;i++){
+	langsum+=langarr[i];  
+}
+alert(langsum);//单科总分
+alert(Math.floor(langsum/langarr.length));//平均分
+
+//对线性代数进行成绩统计(平均分/单科总分)
+var linearr = users.map(function (user) { return user.linearAlgebra; });
+alert(linearr); 
+var linesum=0;
+for(var i=0;i<linearr.length;i++){
+	linesum+=linearr[i];
+}
+alert(linesum);
+alert(Math.floor(linesum/linearr.length));
+
+//对微积分语言进行成绩统计(平均分/单科总分)
+var calarr = users.map(function (user) { return user.calculus; });
+alert(calarr); 
+var calsum=0;
+for(var i=0;i<calarr.length;i++){
+	calsum+=calarr[i];
+}
+alert(calsum);
+alert(Math.floor(calsum/calarr.length));
+
+function sortNumber(a,b){
+	return a-b
+}
+alert(calarr.sort(sortNumber));   //从小到大排序
+newcalarr=calarr.sort(sortNumber);  
+newcalarr.reverse();
+alert(newcalarr);     //从大到小排序
+  </script>
+ </body>
+</html>
