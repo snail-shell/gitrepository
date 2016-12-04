@@ -1,0 +1,6 @@
+  #tuanc{width:600px; height:600px; margin:0 auto; background:#98CCDF;}
+	img{display:none;}
+   #jump{width:200px; height:50px; margin:0 auto;}
+   #jump p{width:200px; height:50px; line-height:50px; font-size:20px;}
+   #jump a{ text-decoration:none; color:#000; border-bottom:2px solid red;}
+   #jump a:hover{color:red; }
